@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = ""; // si no cambiaste la contraseña de root en Laragon
+$pass = "root";
 $db = "tienda_comics";
 
 // Crear conexión
