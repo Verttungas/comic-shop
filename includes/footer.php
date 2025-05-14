@@ -1,6 +1,6 @@
 <!-- includes/footer.php -->
 <footer class="text-center text-muted py-3 border-top">
-  <p>&copy; <?php echo date('Y'); ?> Comic Shop</p>
+  <p>&copy; <?php echo date('Y'); ?> DC's Absolute Comics Store</p>
 </footer>
 
 <!-- Bootstrap JS (para funciones como navbar, modales, etc.) -->

@@ -3,7 +3,7 @@ include '../functions/auth.php';
 include '../includes/db.php';
 
 if (!isset($_SESSION['id_usuario'])) {
-  header("Location: login.php");
+  header("Location: ../pages/login.php");
   exit;
 }
 
@@ -34,6 +34,7 @@ if (mysqli_stmt_num_rows($stmt) > 0) {
 mysqli_stmt_close($stmt);
 mysqli_close($conn);
 
-// Redirigir de vuelta al catálogo
-header("Location: catalog.php?success=1");
+// Redirigir de vuelta a la página de origen
+$redirect = $_SERVER['HTTP_REFERER'] ?? '../pages/catalog.php';
+header("Location: $redirect");
 exit;
