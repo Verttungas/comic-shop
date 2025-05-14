@@ -13,6 +13,10 @@
         <li class="nav-item"><a class="nav-link" href="../pages/catalog.php">Catalog</a></li>
         <li class="nav-item"><a class="nav-link" href="../pages/cart.php">Cart</a></li>
         <li class="nav-item"><a class="nav-link" href="../pages/contact.php">Contact</a></li>
+
+        <?php if (isset($_SESSION['id_usuario']) && $_SESSION['id_usuario'] == 1): ?>
+          <li class="nav-item"><a class="nav-link text-warning" href="../admin/admin_productos.php">Admin</a></li>
+        <?php endif; ?>
       </ul>
 
       <ul class="navbar-nav">
@@ -21,7 +25,7 @@
             <span class="nav-link">Hola, <?= htmlspecialchars($_SESSION['nombre']) ?> 👋</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-danger" href="/functions/logout.php">Cerrar sesión</a>
+            <a class="nav-link text-danger" href="../functions/logout.php">Cerrar sesión</a>
           </li>
         <?php else: ?>
           <li class="nav-item"><a class="nav-link" href="../pages/login.php">Login</a></li>
